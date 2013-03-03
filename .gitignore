@@ -1,5 +1,5 @@
 dao/
-model
+model/
 node_modules/
 public/
 route/
