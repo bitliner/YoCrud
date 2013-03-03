@@ -1,18 +1,28 @@
 {
-  "name": "bitliner.yeoman.generator.fastcrud",
-  "version": "0.0.0",
-  "description": "ERROR: No README.md file found!",
-  "main": "Gruntfile.js",
+  "name": "yocrud",
+  "version": "0.0.1",
+  "description": "Build fast webapp based on Express",
+  "main": "lib/generators/yocrud/index.js",
   "directories": {
     "test": "test"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": "",
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/bitliner/YoCrud.git"
+  },
+  "keywords": [
+    "yeoman",
+    "yeoman",
+    "generator",
+    "express",
+    "app",
+    "crud",
+    "framework"
+  ],
+  "author": "bitliner",
   "license": "BSD",
-  "dependencies": {
-    "yeoman": "~0.9.6"
-  }
+  "gitHead": "bd9f761f61d2e77027737626074d8142f9f7313c"
 }
