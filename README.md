@@ -23,7 +23,7 @@ If you want to invoke all generatos run
 
 `yeoman init yocrud <name>`
 
-where <name> is the name of your app.
+where `<name>` is the name of your app.
 
 For example, if you mant an app to handle books, run `yeoman init yocrud Book`. 
 
@@ -31,7 +31,7 @@ Otherwise you can invoke a single generator:
 
 `yeoman init yocrud:<name of generator> <name>`
 
-where <name of a generator> can be dao, angular, route or model.
+where `<name of a generator>` can be dao, angular, route or model.
 
 Below you can find documentation about the single generators.
 
@@ -54,6 +54,7 @@ function Book(){
 ```  
 
 ### Dao generator
+It generates code to query and save a model to MongoDb via mongoose. 
 
 If you run `yeoman init yocrud:dao Book` it will generate the file dao/BookDao.js and its content will be
 
@@ -89,7 +90,8 @@ module.exports=BookDao
 ```
 
 ### Route generator
-
+It generates code that consists in http handlers (according to REST style).
+ 
 If you run `yeoman init yocrud:route Book` it will generates route/BookRoute.js whose content is:
 
 ```
@@ -99,9 +101,7 @@ function BookRoute=function(options){
 	options.app.get('/'+Book,this.get)
 	options.app.get('/'+Book+'/:_id',this.getSingle)
 	options.app.put('/'+Book+'/:_id',this.update)
-	options.app.post('/'+Book,this.save)
-	
-	
+	options.app.post('/'+Book,this.save)	
 }
 
 BookRoute.prototype.get=function(req,res,next){
@@ -113,7 +113,7 @@ BookRoute.prototype.get=function(req,res,next){
 BookRoute.prototype.getSingle=function(req,res,next){
 	ModelDao.query({_id:req.params._id},function(err,doc){
 		(err)?res.json(500,err):res.json(200,doc)
-		})
+	})
 }
 
 BookRoute.prototype.remove=function(req,res,next){
@@ -125,19 +125,20 @@ BookRoute.prototype.remove=function(req,res,next){
 BookRoute.prototype.update=function(req,res,next){
 	ModelDao.update(req.body._id,req.body,function(err){
 		(err)?res.json(500,err):res.json(200,{success:'ok'})
-		})
+	})
 }
 
 BookRoute.prototype.save=function(req,res,next){
 	ModelDao.save(req.body,function(err,doc){
 		(err)?res.json(500,err):res.json(200,doc)
-		})
+	})
 }
 
 ```
 
 ## TODO
 
+* example app
 * better integration with angular
 * USAGE files
 * generation of a index.html page 
