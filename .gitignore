@@ -3,3 +3,4 @@ model
 node_modules/
 public/
 route/
+.idea/
