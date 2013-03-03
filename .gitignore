@@ -1,6 +1,6 @@
-dao/
-model/
-node_modules/
-public/
-route/
-.idea/
+/dao/
+/model/
+/node_modules/
+/public/
+/route/
+/.idea/
