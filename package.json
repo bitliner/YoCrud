@@ -1,6 +1,6 @@
 {
   "name": "yocrud",
-  "version": "0.0.1",
+  "version": "0.0.9",
   "description": "Build fast webapp based on Express",
   "main": "lib/generators/yocrud/index.js",
   "directories": {
@@ -8,7 +8,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "postinstall":"mv ./node_modules/yocrud ./lib/generators/yeoman/yocrud"
+    "postinstall":"mkdir -p ../../lib/yeoman/generators/ && mv ../yocrud/lib/generators/yocrud ../../lib/yeoman/generators/yocrud"
   },
   "repository": {
     "type": "git",
