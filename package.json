@@ -1,6 +1,6 @@
 {
   "name": "yocrud",
-  "version": "0.0.9",
+  "version": "0.1.1",
   "description": "Build fast webapp based on Express",
   "main": "lib/generators/yocrud/index.js",
   "directories": {

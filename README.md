@@ -143,4 +143,5 @@ BookRoute.prototype.save=function(req,res,next){
 * USAGE files
 * generation of a index.html page 
 * better integration with bootstrap
-
+* better README.md
+* testing
